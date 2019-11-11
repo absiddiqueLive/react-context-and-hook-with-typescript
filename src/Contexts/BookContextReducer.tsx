@@ -1,4 +1,4 @@
-import React, { createContext, useState, useReducer, useEffect } from "react";
+import React, { createContext, useReducer, useEffect, Dispatch } from "react";
 import { bookReducer, ActionBookReducer } from "../Reducers/BookReducer";
 
 export interface IBook {
@@ -15,7 +15,7 @@ export interface PropBookContext {
 
 export interface PropBookReducerContext {
   books: IBook[];
-  dispatcher: any;
+  dispatcher: Dispatch<ActionBookReducer>;
 }
 
 export const BookContextReducer = createContext({} as PropBookReducerContext);
